@@ -59,6 +59,7 @@ public class TrackerScript : MonoBehaviour
         screenDarkener.enabled = false;
         Time.timeScale = 1;
         StartLoop();
+        timeLimit += MainMenuScript.bonusTime;
     }
 
     private void Update()
@@ -85,6 +86,10 @@ public class TrackerScript : MonoBehaviour
         {
             StartCoroutine(WaitAndReset(0));
         }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 
     private void WinLevel()
@@ -93,7 +98,16 @@ public class TrackerScript : MonoBehaviour
         keepGoing = false;
         //Display victory message
         StartCoroutine(DisplayMessage("Level Complete", 0));
+        //Log level completion
+        Scene scene = SceneManager.GetActiveScene();
+        switch(scene.name)
+        {
+            case "ButtonPush": MainMenuScript.level1Complete = true; break;
+            case "BasicCube": MainMenuScript.level2Complete = true; break;
+            case "ButtonAndCube": MainMenuScript.level3Complete = true; break;
+        }
         //Back to Menu
+        StartCoroutine(WaitThenMenu());
     }
 
     private void hitShell()
@@ -157,6 +171,12 @@ public class TrackerScript : MonoBehaviour
         playerShell.SendMessage("enableMovement");
         WipeMessage();
         Record();
+    }
+
+    IEnumerator WaitThenMenu()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("Main Menu");
     }
 
     private void Record()

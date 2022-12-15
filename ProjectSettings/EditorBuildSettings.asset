@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 11393ae436c675945bae324a91ed5492
+  - enabled: 1
+    path: Assets/Scenes/BasicCube.unity
+    guid: 67fc40e3827124d4a91f0df3213b5ae0
+  - enabled: 1
+    path: Assets/Scenes/ButtonAndCube.unity
+    guid: b93990ca4400afc49adb68a9d6b194bd
+  - enabled: 1
+    path: Assets/Scenes/ButtonPush.unity
+    guid: 95e11de34473fce4b861a25c9505b010
   m_configObjects: {}

@@ -276,6 +276,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 163595492}
     - target: {fileID: 8381880397294219126, guid: bfb26785ff547f640a06889626c253f5, type: 3}
+      propertyPath: timeLimit
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381880397294219126, guid: bfb26785ff547f640a06889626c253f5, type: 3}
       propertyPath: playerShell
       value: 
       objectReference: {fileID: 634201522}

@@ -7,6 +7,8 @@ public class MoveObstacleScript : MonoBehaviour
     private Vector3 startPos;
     public float timeToStay = 1f;
     public Vector3 targetPos;
+    public AudioSource openSound;
+    public AudioSource closingSound;
     bool isRunning;
 
     private Coroutine coroutine;
@@ -60,6 +62,7 @@ public class MoveObstacleScript : MonoBehaviour
             yield return null;
         }
         transform.position = targetPos;
+        openSound.Play();
     }
 
     IEnumerator moveBack()
@@ -73,6 +76,7 @@ public class MoveObstacleScript : MonoBehaviour
             yield return null;
         }
         transform.position = startPos;
+        closingSound.Play();
     }
 
     IEnumerator moveToAndBack()

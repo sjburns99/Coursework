@@ -73,15 +73,6 @@ public class TrackerScript : MonoBehaviour
         {
             timeLeft = 0f;
         }
-        else if (Input.GetKeyDown(KeyCode.E))
-        {
-            //Simulate repeat of loop
-            if (!running)
-            {
-                loopBack();
-                Playback();
-            }
-        }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             StartCoroutine(WaitAndReset(0));

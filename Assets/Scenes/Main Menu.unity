@@ -1346,7 +1346,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 819, y: -4}
+  m_AnchoredPosition: {x: 819, y: 74}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &552197529
@@ -1779,7 +1779,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "WASD\nMovement\n\nSpace\nJump\n\nQ \nSkip to Next Loop\n\nR \nReset Loops"
+  m_text: "WASD\nMovement\n\nSpace\nJump\n\nQ \nSkip to Next Loop\n\nR \nReset Loops\n\nESC\nExit
+    to Menu"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 48b53e2ed54fae740a686e8bb820d0ba, type: 2}
   m_sharedMaterial: {fileID: 2172342355252875774, guid: 48b53e2ed54fae740a686e8bb820d0ba, type: 2}
@@ -1842,7 +1843,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -210.66624, y: 117.49709, z: 0, w: -447.14035}
+  m_margin: {x: -210.66624, y: 117.49709, z: 0, w: -545.8503}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

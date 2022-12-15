@@ -9,6 +9,7 @@ public class InteractScript : MonoBehaviour
     Rigidbody rb;
     public GameObject timelineManager; float interactDistance;
     public GameObject objectAffects;
+    public AudioSource buttonPressSound;
 
     // Start is called before the first frame update
     void Start()
@@ -47,6 +48,7 @@ public class InteractScript : MonoBehaviour
                     //Send signal to other object
                     Debug.Log("Sending signal to " + objectAffects.name);
                     objectAffects.SendMessage("doAction");
+                    buttonPressSound.Play();
                 }
             }
         }

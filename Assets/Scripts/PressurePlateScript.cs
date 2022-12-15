@@ -5,6 +5,7 @@ using UnityEngine;
 public class PressurePlateScript : MonoBehaviour
 {
     public GameObject objectAffects;
+    public AudioSource pressSound;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class PressurePlateScript : MonoBehaviour
     {
         Debug.Log("Entered");
         objectAffects.SendMessage("doActionStay");
+        pressSound.Play();
     }
 
     private void OnTriggerExit(Collider other)
